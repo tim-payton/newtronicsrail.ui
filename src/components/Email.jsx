@@ -18,7 +18,7 @@ const Email = () => {
     <Container maxWidth="md">
       <Typography variant="body1" gutterBottom>
         To register your interest there is a contact form below, or emails can
-        be sent to j.newton@newtronics.co.uk
+        be sent to <a href="mailto:j.newton@newtronics.co.uk?Subject=Newtronics%20Rail%20enquiry">j.newton@newtronics.co.uk</a>
       </Typography>
       <Typography variant="body1" gutterBottom>
         Contact

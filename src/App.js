@@ -1,5 +1,6 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -25,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   return (
     <div className="App">
       <Container maxWidth="lg">
@@ -65,7 +68,7 @@ function App() {
                 the final version of the frame, shown below.
               </Typography>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={matches ? 4 : 12}>
               <Paper elevation={0}>
                 <img
                   src={firstinstall}
@@ -85,7 +88,7 @@ function App() {
                 </Typography>
               </Paper>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={matches ? 4 : 12}>
               <Paper elevation={0}>
                 <img
                   src={developmentrig}
@@ -102,7 +105,7 @@ function App() {
                 </Typography>
               </Paper>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={matches ? 4 : 12}>
               <Paper elevation={0}>
                 <img
                   src={newframe}
@@ -157,7 +160,7 @@ function App() {
               </Typography>
             </Grid>
             <Grid item xs={4} />
-            <Grid item xs={4}>
+            <Grid item xs={matches ? 12 : 12}>
               <Carousel />
             </Grid>
             <Grid item xs={4} />

@@ -25,7 +25,6 @@ const Email = () => {
       </Typography>
       <form className={classes.root} noValidate autoComplete="off">
         <TextField
-          autoFocus
           margin="normal"
           id="email"
           label="Email Address"
@@ -37,7 +36,6 @@ const Email = () => {
           }}
         />
         <TextField
-          autoFocus
           margin="normal"
           id="message"
           label="Message"

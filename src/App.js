@@ -51,7 +51,7 @@ function App() {
                 gutterBottom
                 align="center"
               >
-                NEWTRONICS RAIL TURN TABLE SYSTEM
+                PROGRAMMABLE TURN TABLE SYSTEM
               </Typography>
             </Grid>
             <Grid item xs={12}>

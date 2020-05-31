@@ -1,34 +1,35 @@
-import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import MobileStepper from "@material-ui/core/MobileStepper";
-import Button from "@material-ui/core/Button";
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
-import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
+import React from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
-import c1 from "../assets/images/carousel1.jpg";
-import c2 from "../assets/images/carousel2.jpg";
-import c3 from "../assets/images/carousel3.jpg";
-import c4 from "../assets/images/carousel4.jpg";
+import MobileStepper from '@material-ui/core/MobileStepper';
+import Button from '@material-ui/core/Button';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+import c1 from '../assets/images/carousel1.jpg';
+import c2 from '../assets/images/carousel2.jpg';
+import c3 from '../assets/images/carousel3.jpg';
+import c4 from '../assets/images/carousel4.jpg';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: "c1",
+    label: 'c1',
     imgPath: c1,
   },
   {
-    label: "c2",
+    label: 'c2',
     imgPath: c2,
   },
   {
-    label: "c3",
+    label: 'c3',
     imgPath: c3,
   },
   {
-    label: "c4",
+    label: 'c4',
     imgPath: c4,
   },
 ];
@@ -38,18 +39,29 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   header: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    height: "100%",
-    display: "block",
-    maxWidth: "100%",
-    overflow: "hidden",
-    width: "100%",
+    textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      height: '100%',
+      display: 'block',
+      maxWidth: '100%',
+      overflow: 'hidden',
+      width: '100%',
+    },
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: theme.palette.secondary.main,
+      height: '30%',
+      display: 'block',
+      maxWidth: '30%',
+      overflow: 'hidden',
+      width: '30%',
+    },
   },
 }));
 
@@ -74,11 +86,10 @@ function Carousel() {
   return (
     <div className={classes.root}>
       <AutoPlaySwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
-        enableMouseEvents
-      >
+        enableMouseEvents>
         {tutorialSteps.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
@@ -100,10 +111,9 @@ function Carousel() {
           <Button
             size="small"
             onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
+            disabled={activeStep === maxSteps - 1}>
             Next
-            {theme.direction === "rtl" ? (
+            {theme.direction === 'rtl' ? (
               <KeyboardArrowLeft />
             ) : (
               <KeyboardArrowRight />
@@ -112,7 +122,7 @@ function Carousel() {
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === "rtl" ? (
+            {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (
               <KeyboardArrowLeft />

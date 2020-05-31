@@ -23,8 +23,8 @@ const TurnTable = () => {
     <>
       <Grid item xs={12}>
         <Typography variant="h4" component="h2" gutterBottom align="center">
-          Newtronics Rail programable automated turn tabel system, supporting up
-          to 16 track positions and simple programming.
+          Newtronics Rail programmable automated turn tabel system, supporting
+          up to 16 track positions and simple programming.
         </Typography>
       </Grid>
       <Grid item xs={12}>

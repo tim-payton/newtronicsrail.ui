@@ -7,18 +7,31 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import firstinstall from '../assets/images/firstinstall.jpg';
 import developmentrig from '../assets/images/developmentrig.jpg';
-import newframe from '../assets/images/newframe.jpg';
+import railBender from '../assets/images/railBender/bender1.jpg';
 import Email from '../components/Email';
 
 const Main = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  let train = `          
+  e@@@@@@@@@@@@@@@
+  @@@""""""""""\n
+ @" ___ ___________\n
+II__[w] | [i] [z] |\n
+{======|_|~~~~~~~~~|\n
+/oO--000'"\`-OO---OO-\n`
+
   return (
     <>
       <Grid item xs={12}>
         <Typography variant="h4" component="h2" gutterBottom align="center">
           Newtronics Rail Turn table and traverser products are still in
           development
+          <br />
+          
+          <br />
+
+
         </Typography>
       </Grid>
       <Grid item xs={12}>
@@ -60,14 +73,14 @@ const Main = () => {
         <Paper elevation={0}>
           <Link to="/railbender">
             <img
-              src={newframe}
+              src={railBender}
               alt="Newtronics Rail"
               height="100%"
               width="100%"
             />
           </Link>
           <Typography variant="h5" gutterBottom>
-            Rail
+            Rail Bender
           </Typography>
         </Paper>
       </Grid>

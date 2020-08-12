@@ -41,7 +41,7 @@ const RailBender = () => {
       </Grid>
       <Grid item xs={12}>
         <Paper elevation={0}>
-          <YouTube
+          {/* <YouTube
             containerClassName={classes.youtube}
             videoId="FUgT8Ku04Xo"
             opts={{
@@ -52,7 +52,7 @@ const RailBender = () => {
                 autoplay: 0,
               },
             }}
-          />
+          /> */}
         </Paper>
       </Grid>
       <Grid item xs={12}>

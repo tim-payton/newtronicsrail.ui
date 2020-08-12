@@ -101,7 +101,7 @@ const TurnTable = () => {
         </Paper>
       </Grid>
       <Grid item xs={12}>
-        <YouTube
+        {/* <YouTube
           containerClassName={classes.youtube}
           videoId="FUgT8Ku04Xo"
           opts={{
@@ -112,7 +112,7 @@ const TurnTable = () => {
               autoplay: 0,
             },
           }}
-        />
+        /> */}
       </Grid>
       <Grid item xs={12}>
         <Paper elevation={0}>
